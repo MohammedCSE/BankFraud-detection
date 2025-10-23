@@ -6,7 +6,7 @@ transactions = []
 for i in range(num):
     card_id = "hsbc001"
     amount = random.randint(1, 5000)
-    country = random.choices(["uk", "us"], weights=[0.98, 0.02])[0]  # 80% UK, 20% US
+    country = random.choices(["uk", "us"], weights=[0.98, 0.02])[0]  
     hour = random.randint(0, 23)
     minute = random.randint(0, 59)
     second = random.randint(0, 59)
@@ -60,4 +60,5 @@ server.login(sender_email, password)
 text = f"{subject},{message}"
 server.sendmail(sender_email,receiver_email,text)
 print(f"the email has been sent successfully to {receiver_email}" )
+
 
